@@ -48,10 +48,10 @@ Gra w Wisielca to klasyczna gra słowna, w której gracze próbują odgadnąć u
    - Gra zakończy się, gdy odgadniesz całe słowo lub skończą Ci się próby.
 
 4. **Przykładowy plik `slowa.txt`:**
-komputer
-programowanie
-wisielec
-java
+- komputer
+- programowanie
+- wisielec
+- java
 
 Upewnij się, że plik jest poprawnie umieszczony i zawiera słowa w odpowiednim formacie.
 
