@@ -35,7 +35,7 @@ Gra w Wisielca to klasyczna gra słowna, w której gracze próbują odgadnąć u
 
 ### Uruchomienie
 1. **Przygotuj plik `slowa.txt`:**
-   - Utwórz plik `slowa.txt` zawierający listę słów do zgadywania, umieść go w katalogu `C:/Users/xdami/IdeaProjects/WisielecGame/` (lub odpowiednim katalogu w Twoim systemie).
+   - Utwórz plik `slowa.txt` zawierający listę słów do zgadywania, umieść go w katalogu `C:/Users/maxusikk/IdeaProjects/WisielecGame/`(lub odpowiednim katalogu w Twoim systemie).
    - Każde słowo powinno być w osobnej linii.
 
 2. **Uruchom projekt:**
