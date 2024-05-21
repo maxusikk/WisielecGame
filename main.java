@@ -19,56 +19,55 @@ public class main {
         String hiddenText = words.get((int) (Math.random() * words.size()));
         char[] textArray = hiddenText.toCharArray();
 
-        char[] myAnswers = new char[textArray.length];
+        char[] mojaOdpowiedz = new char[textArray.length];
         for (int i = 0; i < textArray.length; i++) {
-            myAnswers[i] = '?';
+            mojaOdpowiedz[i] = '?';
         }
 
-        boolean finished = false;
-        int lives = 6;
-
-        while (!finished && lives > 0) {
+        boolean koniec = false;
+        int zycia = 6;
+        while (!koniec && zycia > 0) {
             System.out.println("******************************");
 
-            String letter = input.next();
+            String litera = input.next();
             // sprawdzenie prawidlowosci danych
-            while (letter.length() != 1 || Character.isDigit(letter.charAt(0))) {
+            while (litera.length() != 1 || Character.isDigit(litera.charAt(0))) {
                 System.out.println("Niepoprawna wartosc - Sprobuj ponownie");
-                letter = input.next();
+                litera = input.next();
             }
 
             boolean found = false;
             for (int i = 0; i < textArray.length; i++) {
-                if (letter.charAt(0) == textArray[i]) {
-                    myAnswers[i] = textArray[i];
+                if (litera.charAt(0) == textArray[i]) {
+                    mojaOdpowiedz[i] = textArray[i];
                     found = true;
                 }
             }
 
             if (!found) {
-                lives--;
+                zycia--;
                 System.out.println("Nie znaleziono litery w tekście.");
             }
 
             // Wyświetlanie aktualnego stanu zgadywanego słowa
-            for (char c : myAnswers) {
+            for (char c : mojaOdpowiedz) {
                 System.out.print(c + " ");
             }
-            System.out.println("\nLives left: " + lives);
-            drawHangman(lives);
+            System.out.println("\nLives left: " + zycia);
+            drawHangman(zycia);
 
             // Sprawdzenie czy wszystkie litery zostały zgadnięte
-            finished = true;
-            for (char c : myAnswers) {
+            koniec = true;
+            for (char c : mojaOdpowiedz) {
                 if (c == '?') {
-                    finished = false;
+                    koniec = false;
                     break;
                 }
             }
 
-            if (finished) {
+            if (koniec) {
                 System.out.println("Gratulacje! Zgadłeś słowo: " + hiddenText);
-            } else if (lives <= 0) {
+            } else if (zycia <= 0) {
                 System.out.println("Przegrales! Sprobuj jeszcze raz! Słowo to: " + hiddenText);
             }
         }
